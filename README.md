@@ -3,7 +3,7 @@
 <br/>
 
 
-	Catppuccin for <a href="https://www.nixos.org/">Nix</a>
+	Catppuccin for Nix.
 </h3>
 ## Usage
 
