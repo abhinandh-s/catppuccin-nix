@@ -1,5 +1,5 @@
 # Catppuccin for Nix.
-
+<!--
 ## Usage
 
 ```nix
@@ -24,7 +24,7 @@ Then in your `configuration.nix`
   ];
 }
 ```
-
+-->
 
 &nbsp;
 
