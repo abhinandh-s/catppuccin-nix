@@ -1,17 +1,17 @@
 {
   description = "A very basic flake";
 
-  inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-  };
+  inputs = { };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self }: {
     catppuccin = {
-      frappe = import ./palette/hex/frappe.nix;
       latte = import ./palette/hex/latte.nix;
+      frappe = import ./palette/hex/frappe.nix;
       macchiato = import ./palette/hex/macchiato.nix;
       mocha = import ./palette/hex/mocha.nix;
       bare = import ./palette/bare;
+      hex = import ./palette/hex;
+      rgb = import ./palette/rgb;
     };
 
     overlays.default = final: prev: {
@@ -26,7 +26,6 @@
         description = "Catppuccin color palette";
       };
       config = {};
-    };
+   };
   };
 }
-
