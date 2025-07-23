@@ -1,10 +1,10 @@
 <h3 align="center">
-	<img src="https://www.pngkey.com/png/detail/608-6087588_nix-logo-nixos-logo.png" width="100" alt="Logo"/><br/>
+	<img src="https://www.pngkey.com/png/detail/608-6087588_nix-logo-nixos-logo.png" width="100" alt="Logo"/>
+<br/>
 
 
 	Catppuccin for <a href="https://www.nixos.org/">Nix</a>
-	<img 
-
+</h3>
 ## Usage
 
 ```nix
