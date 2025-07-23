@@ -1,10 +1,5 @@
-<h3 align="center">
-	<img src="https://www.pngkey.com/png/detail/608-6087588_nix-logo-nixos-logo.png" width="100" alt="Logo"/>
-<br/>
+# Catppuccin for Nix.
 
-
-	Catppuccin for Nix.
-</h3>
 ## Usage
 
 ```nix
