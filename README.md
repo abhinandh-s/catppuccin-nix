@@ -4,9 +4,9 @@
 
 ```nix
 {
-  inputs.catppuccin.url = "github:abhinandh-s/catppuccin-flake";
+  inputs.catppuccin.url = "github:abhinandh-s/catppuccin-flake"; #1
 
-  outputs = { self, nixpkgs, ... }: @ inputs {
+  outputs = { self, nixpkgs, ... }: @ inputs { # <- #2
     nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       ...
