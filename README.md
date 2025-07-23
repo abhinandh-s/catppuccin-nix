@@ -4,8 +4,27 @@
 
 ```nix
 {
+  inputs.catppuccin.url = "github:abhinandh-s/catppuccin-flake";
+
+  outputs = { self, nixpkgs, ... }: @ inputs {
+    nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      ...
+  };
 }
 ```
+
+Then in your `configuration.nix`
+
+```nix
+{ inputs, ... }: {
+
+  nixpkgs.overlays = [
+    inputs.catppuccin.overlays.default
+  ];
+}
+```
+
 
 &nbsp;
 
