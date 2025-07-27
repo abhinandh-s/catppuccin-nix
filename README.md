@@ -10,7 +10,7 @@ inputs = {
 outputs = { self, nixpkgs, home-manager, ... } @ inputs: { ... }
 ```
 
-Then in your `configuration.nix`
+Then, in your `configuration.nix`:
 
 ```nix 
 { inputs, ... }: {
@@ -21,7 +21,7 @@ Then in your `configuration.nix`
 }
 ```
 
-Now colors are available in every nix module via `pkgs.catppuccin`:
+Now, the colors are available in every nix module via `pkgs.catppuccin`:
 
 ## Example 
 
@@ -54,6 +54,21 @@ in
   };
 }
 
+```
+
+## Color Formats
+
+```nix 
+let
+  rgb_red   = pkgs.catppuccin.rgb.mocha.red;   # "rgb(243, 139, 168)"
+  rgba_red  = pkgs.catppuccin.rgba.mocha.red;  # "rgb(243, 139, 168, 1)"
+  hex_red   = pkgs.catppuccin.hex.mocha.red;   # "#f38ba8"
+  hsl_red   = pkgs.catppuccin.hsl.mocha.red;   # "hsl(343deg, 81%, 75%)"
+  bare_red  = pkgs.catppuccin.bare.mocha.red;  # "f38ba8"
+
+  # `hex` is re-exported under `catppuccin` — i.e., we can access it as:
+  hex_blue = pkgs.catppuccin.mocha.blue;       # "#89b4fa"
+in
 ```
 
 
