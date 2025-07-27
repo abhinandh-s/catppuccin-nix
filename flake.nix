@@ -1,24 +1,26 @@
 {
-  description = "A very basic flake";
+  description = "A flake for Catppuccin color palette";
 
   inputs = { };
 
   outputs = { self }: {
     catppuccin = {
-      latte = import ./palette/hex/latte.nix;
-      frappe = import ./palette/hex/frappe.nix;
-      macchiato = import ./palette/hex/macchiato.nix;
-      mocha = import ./palette/hex/mocha.nix;
-      bare = import ./palette/bare;
-      hex = import ./palette/hex;
-      rgb = import ./palette/rgb;
+      latte = self.catppuccin.hex.latte;
+      frappe = self.catppuccin.hex.frappe;
+      macchiato = self.catppuccin.hex.macchiato;
+      mocha = self.catppuccin.hex.mocha;
+      bare = import ./palette/bare.nix;
+      hex = import ./palette/hex.nix;
+      hsl = import ./palette/hsl.nix;
+      rgb = import ./palette/rgb.nix;
+      rgba = import ./palette/rgba.nix;
     };
 
     overlays.default = final: prev: {
       catppuccin = self.catppuccin;
     };
 
-    homeManagerModules.default = { config, lib, ... }: {
+    homeManagerModules.default = { lib, ... }: {
       options.catppuccin = lib.mkOption {
         type = lib.types.attrs;
         readOnly = true;

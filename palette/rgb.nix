@@ -1,5 +1,5 @@
 {
-  frappe = {
+  latte = {
     rosewater = "rgb(220, 138, 120)";
     flamingo = "rgb(221, 120, 120)";
     pink = "rgb(234, 118, 203)";
@@ -27,7 +27,7 @@
     mantle = "rgb(230, 233, 239)";
     crust = "rgb(220, 224, 232)";
   };
-  latte = {
+  frappe = {
     rosewater = "rgb(242, 213, 207)";
     flamingo = "rgb(238, 190, 190)";
     pink = "rgb(244, 184, 228)";
