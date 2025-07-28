@@ -61,7 +61,7 @@ in
 ```nix 
 let
   rgb_red   = pkgs.catppuccin.rgb.mocha.red;   # "rgb(243, 139, 168)"
-  rgba_red  = pkgs.catppuccin.rgba.mocha.red;  # "rgb(243, 139, 168, 1)"
+  rgba_red  = pkgs.catppuccin.rgba.mocha.red 0.7;  # "rgb(243, 139, 168, 0.7)"
   hex_red   = pkgs.catppuccin.hex.mocha.red;   # "#f38ba8"
   hsl_red   = pkgs.catppuccin.hsl.mocha.red;   # "hsl(343deg, 81%, 75%)"
   bare_red  = pkgs.catppuccin.bare.mocha.red;  # "f38ba8"
