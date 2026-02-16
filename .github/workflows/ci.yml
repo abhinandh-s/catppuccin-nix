@@ -1,0 +1,23 @@
+name: "Flake Check"
+on:
+  push:
+    branches:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v25
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Check Flake Metadata
+        run: nix flake metadata
+
+      - name: Verify Flake Outputs
+        run: nix flake check
