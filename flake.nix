@@ -31,11 +31,11 @@
 
     homeManagerModules.default = {lib, ...}: let
       rgbify = colors: lib.mapAttrs (_name: color: toRgb color) colors;
-      rgaify = colors: lib.mapAttrs (_name: color: alpha: toRgba color alpha) colors;
+      rgbaify = colors: lib.mapAttrs (_name: color: alpha: toRgba color alpha) colors;
       default = {
         inherit (self.catppuccin) latte frappe macchiato mocha bare hex hsl;
         rgb = lib.mapAttrs (_flavor: palette: rgbify palette) rgb_attr;
-        rgba = lib.mapAttrs (_flavor: palette: rgaify palette) rgb_attr;
+        rgba = lib.mapAttrs (_flavor: palette: rgbaify palette) rgb_attr;
       };
     in {
       options.catppuccin = lib.mkOption {
